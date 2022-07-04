@@ -1,4 +1,4 @@
-# cse-210-06
+# PORTAL RUSH GAME BYUI-CSE-210-06
 
 # Rules
 Portal Rush is played according to the following rules. The player can jump up using Space Key and A and D or Left and Right Arrow Keys to move foward and backward. Players try to maneuver far away from the Reaper so he won't come closer and snatch our player's soul. If a player collides with the obstacles the reaper gets a chance to come closer and closer ever time. A "game over" message is displayed in the middle of the screen if reaper was success full in snaching the player's soul. This is a infinite runner as the game becomes faster and faster at certain check points and a suprise in the end awaits.
@@ -49,7 +49,7 @@ root
 
 ## Authors & Contributions
 ---
-* Arnold Sujan Katru (kat21015@byui.edu)- Scoring
-* Sandra Asamoah Adeleye (ade21006@byui.edu)- Collision Detection
-* Marcus Blanc (bla21011@byui.edu)- Game Over Messages
-* Karrass Phiri (phi21020@byui.edu)-Duplicate Player And Wall
+* Arnold Sujan Katru (kat21015@byui.edu)- Game Play / Scripts
+* Sandra Asamoah Adeleye (ade21006@byui.edu)- Game Assets / Casting
+* Marcus Blanc (bla21011@byui.edu)- I/O / Services
+* Karrass Phiri (phi21020@byui.edu)- Game Play / Directing 
