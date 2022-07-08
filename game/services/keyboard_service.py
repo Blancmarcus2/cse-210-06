@@ -1,3 +1,7 @@
+import pyray
+from game.shared.point import Point
+
+
 class KeyboardService:
     """A keyboard service inteface."""
 
@@ -10,6 +14,8 @@ class KeyboardService:
         Returns:
             True if the key is being pressed; false if otherwise.
         """
+        if pyray.is_key_down(pyray.KEY_LEFT):
+            dx = -1
         raise NotImplementedError("not implemented in base class")
     
     def is_key_pressed(self, key):
