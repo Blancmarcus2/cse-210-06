@@ -1,8 +1,16 @@
+import pyray
+
+
 class VideoService:
     """A video service inteface."""
 
     def clear_buffer(self):
         """Prepares the buffer for drawing."""
+        pyray.begin_drawing()
+        pyray.clear_background(pyray.BLACK)
+        if self._debug == True:
+            self._draw_grid()
+        
         raise NotImplementedError("not implemented in base class")
 
     def draw_image(self, image, position):
@@ -44,6 +52,7 @@ class VideoService:
 
     def flush_buffer(self):
         """Swaps the buffers, displaying everything that has been drawn on the screen."""
+        pyray.end_drawing()
         raise NotImplementedError("not implemented in base class")
 
     def initialize(self):
@@ -57,6 +66,7 @@ class VideoService:
         Returns:
             True if the window is open; false if otherwise.
         """
+        return not pyray.window_should_close()
         raise NotImplementedError("not implemented in base class")
 
     def load_fonts(self, directory):
