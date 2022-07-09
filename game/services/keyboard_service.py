@@ -1,5 +1,5 @@
 import pyray
-from game.shared.point import Point
+from game.services.keyboard_service import KeyboardService
 
 
 class KeyboardService:
@@ -27,6 +27,8 @@ class KeyboardService:
         Returns:
             True if the key was pressed once; false if otherwise.
         """
+        raylib_key = self._keys[key.lower()]
+        return pyray.is_key_pressed(raylib_key)
         raise NotImplementedError("not implemented in base class")
     
     def is_key_released(self, key):
@@ -38,6 +40,8 @@ class KeyboardService:
         Returns:
             True if the key was released once; false if otherwise.
         """
+        raylib_key = self._keys[key.lower()]
+        return pyray.is_key_released(raylib_key)
         raise NotImplementedError("not implemented in base class")
     
     def is_key_up(self, key):
@@ -49,4 +53,6 @@ class KeyboardService:
         Returns:
             True if the key is released; false if otherwise.
         """
+        raylib_key = self._keys[key.lower()]
+        return pyray.is_key_up(raylib_key)
         raise NotImplementedError("not implemented in base class")
